@@ -1,0 +1,22 @@
+USE [bd_pruebasd]
+GO
+
+/****** Object:  Table [dbo].[tb_categorias]    Script Date: 7/10/2024 7:41:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_categorias](
+	[id_categoria] [int] IDENTITY(1,1) NOT NULL,
+	[descripcion_ca] [varchar](50) NULL,
+	[activo_ca] [bit] NULL,
+ CONSTRAINT [PK_tb_categorias] PRIMARY KEY CLUSTERED 
+(
+	[id_categoria] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
