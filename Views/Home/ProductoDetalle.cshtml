@@ -1,0 +1,62 @@
+﻿@model CRUDWebEf.Models.ViewsModel.ProductoVM
+@{
+    ViewData["Title"] = "ProductoDetalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.oProducto.IdProducto == 0)
+{
+    <h1>Crear Producto</h1>
+}
+else
+{
+    <h1>Editar Producto</h1>
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="ProductoDetalle" asp-controller="Home" method="post">
+            <input asp-for="oProducto.IdProducto" type="hidden">
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.DescripcionPr">Descripción</label>
+                <input class="form-control form-control-sm" asp-for="oProducto.DescripcionPr" type="text">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.Marca">Marca</label>
+                <input class="form-control form-control-sm" asp-for="oProducto.Marca" type="text">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.IdMedida">Medidas</label>
+                <select class="form-select form-select-sm" asp-for="oProducto.IdMedida" asp-items="@Model.olistaMedidas">
+                    <option selected disabled>-- SELECCIONAR --</option>
+                </select>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.IdCategoria">Categorias</label>
+                <select class="form-select form-select-sm" asp-for="oProducto.IdCategoria" asp-items="@Model.olistaCategorias">
+                    <option selected disabled>-- SELECCIONAR --</option>
+                </select>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.Stock">Stock</label>
+                <input class="form-control form-control-sm" asp-for="oProducto.Stock" type="text">
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oProducto.Precio">Precio</label>
+                <input class="form-control form-control-sm" asp-for="oProducto.Precio" type="text">
+            </div>
+            <div class="mb-2">
+                @if (Model.oProducto.IdProducto == 0)
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Crear</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Actualizar</button>
+                }
+                <a asp-action="Index" asp-controller="Home" class="btn btn-dark btn-sm">Volver</a>
+            </div>
+
+        </form>
+    </div>
+</div>
