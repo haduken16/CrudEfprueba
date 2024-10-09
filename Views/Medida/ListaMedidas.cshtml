@@ -1,0 +1,45 @@
+﻿@model List<CRUDWebEf.Models.TbMedida>
+@{
+    ViewData["Title"] = "ListaMedidas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista de Medidas
+    </div>
+    <div class="card-body">
+        <a asp-action="MedidaDetalle" asp-controller="Medida" asp-route-IdMedida="0" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+    </div>
+    <hr />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th width="150px"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.IdMedida</td>
+                    <td>@item.DescripcionMe</td>
+                    <td>
+                        <a asp-action="MedidaDetalle" asp-controller="Medida" class="btn btn-primary btn-sm" asp-route-IdMedida="@item.IdMedida">Editar</a>
+                        <a asp-action="EliminarMedida" asp-controller="Medida" class="btn btn-danger btn-sm" asp-route-IdMedida="@item.IdMedida">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="mb-2">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-dark btn-sm">Volver</a>
+    </div>
+</div>
+
+
+
+

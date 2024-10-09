@@ -1,0 +1,39 @@
+﻿@model  CRUDWebEf.Models.TbCategoria
+@{
+    ViewData["Title"] = "CategoriaDetalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.IdCategoria == 0)
+{
+    <h1>Crear Categoria</h1>
+}
+else
+{
+    <h1>Editar Categoria</h1>
+}
+
+<hr />
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="CategoriaDetalle" asp-controller="Categoria" method="post">
+            <input asp-for="IdCategoria" type="hidden">
+            <div class="mb-2">
+                <label class="form-label" asp-for="DescripcionCa">Descripción</label>
+                <input class="form-control form-control-sm" asp-for="DescripcionCa" type="text">
+            </div>
+            <div class="mb-2">
+                @if (Model.IdCategoria == 0)
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Crear</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Actualizar</button>
+                }
+                <a asp-action="ListaCategorias" asp-controller="Categoria" class="btn btn-dark btn-sm">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+

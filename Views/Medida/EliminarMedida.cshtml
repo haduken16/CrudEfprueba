@@ -1,0 +1,24 @@
+﻿@model  CRUDWebEf.Models.TbMedida
+@{
+    ViewData["Title"] = "EliminarMedida";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Eliminar Medida
+    </div>
+    <div class="card-body">
+        <form asp-action="EliminarMedida" asp-controller="Medida" method="post">
+            <input asp-for="IdMedida" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar la medida: @Html.DisplayTextFor(m => m.DescripcionMe)?
+            </div>
+
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-action="ListaMedidas" asp-controller="Medida" class="btn btn-warning">Volver a la lista</a>
+        </form>
+    </div>
+</div>
+

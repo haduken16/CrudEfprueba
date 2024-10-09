@@ -1,0 +1,23 @@
+﻿@model  CRUDWebEf.Models.TbCategoria
+@{
+    ViewData["Title"] = "EliminarCategoria";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Eliminar Categoria
+    </div>
+    <div class="card-body">
+        <form asp-action="EliminarCategoria" asp-controller="Categoria" method="post">
+            <input asp-for="IdCategoria" type="hidden" class="form-control">
+
+            <div class="alert alert-danger" role="alert">
+                ¿Desea eliminar la categoria: @Html.DisplayTextFor(m => m.DescripcionCa)?
+            </div>
+
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-action="ListaCategorias" asp-controller="Categoria" class="btn btn-warning">Volver a la lista</a>
+        </form>
+    </div>
+</div>

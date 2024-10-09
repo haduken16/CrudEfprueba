@@ -508,3 +508,4 @@ C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf\obj\Debug\
 C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf\obj\Debug\net6.0\CRUDWebEf.pdb
 C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf\obj\Debug\net6.0\CRUDWebEf.genruntimeconfig.cache
 C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf\obj\Debug\net6.0\ref\CRUDWebEf.dll
+C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf\obj\Debug\net6.0\CRUDWebEf.sourcelink.json

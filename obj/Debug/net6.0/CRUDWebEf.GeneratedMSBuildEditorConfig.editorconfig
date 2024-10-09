@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ASUS.USER\Desktop\practicas\pruebaDipaso\CRUDWebEf\CRUDWebEf
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Categoria/CategoriaDetalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENhdGVnb3JpYURldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Categoria/EliminarCategoria.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEVsaW1pbmFyQ2F0ZWdvcmlhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Categoria/ListaCategorias.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXExpc3RhQ2F0ZWdvcmlhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Home/Eliminar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFbGltaW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +44,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Home/ProductoDetalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcm9kdWN0b0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Medida/EliminarMedida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWRhXEVsaW1pbmFyTWVkaWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Medida/ListaMedidas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWRhXExpc3RhTWVkaWRhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Medida/MedidaDetalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWRhXE1lZGlkYURldGFsbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ASUS.USER/Desktop/practicas/pruebaDipaso/CRUDWebEf/CRUDWebEf/Views/Shared/Error.cshtml]

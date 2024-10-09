@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CRUDWebEf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3484af67f335d2140f590d35b9c7498dd2de0600")]
 [assembly: System.Reflection.AssemblyProductAttribute("CRUDWebEf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CRUDWebEf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,44 @@
+﻿@model List<CRUDWebEf.Models.TbCategoria>
+@{
+    ViewData["Title"] = "ListaCategorias";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        Lista de Medidas
+    </div>
+    <div class="card-body">
+        <a asp-action="CategoriaDetalle" asp-controller="Categoria" asp-route-IdCategoria="0" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descripción</th>
+                    <th width="150px"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdCategoria</td>
+                        <td>@item.DescripcionCa</td>
+                        <td>
+                            <a asp-action="CategoriaDetalle" asp-controller="Categoria" class="btn btn-primary btn-sm" asp-route-IdCategoria="@item.IdCategoria">Editar</a>
+                            <a asp-action="EliminarCategoria" asp-controller="Categoria" class="btn btn-danger btn-sm" asp-route-IdCategoria="@item.IdCategoria">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="mb-2">
+
+            <a asp-action="Index" asp-controller="Home" class="btn btn-dark btn-sm">Volver</a>
+        </div>
+    </div>
+</div>
+
+

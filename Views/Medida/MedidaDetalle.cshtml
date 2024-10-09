@@ -1,0 +1,39 @@
+﻿@model CRUDWebEf.Models.TbMedida
+@{
+    ViewData["Title"] = "MedidaDetalle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.IdMedida == 0)
+{
+    <h1>Crear Medida</h1>
+}
+else
+{
+    <h1>Editar Medida</h1>
+}
+
+<hr />
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="MedidaDetalle" asp-controller="Medida" method="post">
+            <input asp-for="IdMedida" type="hidden">
+            <div class="mb-2">
+                <label class="form-label" asp-for="DescripcionMe">Descripción</label>
+                <input class="form-control form-control-sm" asp-for="DescripcionMe" type="text">
+            </div>
+            <div class="mb-2">
+                @if (Model.IdMedida == 0)
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Crear</button>
+                }
+                else
+                {
+                    <button type="submit" class="btn btn-primary btn-sm w-25">Actualizar</button>
+                }
+                <a asp-action="ListaMedidas" asp-controller="Medida" class="btn btn-dark btn-sm">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
