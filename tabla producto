@@ -1,0 +1,42 @@
+USE [bd_pruebasd]
+GO
+
+/****** Object:  Table [dbo].[tb_productos]    Script Date: 7/10/2024 7:38:56 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tb_productos](
+	[id_producto] [int] IDENTITY(1,1) NOT NULL,
+	[descripcion_pr] [varchar](80) NULL,
+	[marca] [varchar](20) NULL,
+	[id_medida] [int] NULL,
+	[id_categoria] [int] NULL,
+	[stock] [decimal](18, 2) NULL,
+	[fecha_creacion] [datetime] NULL,
+	[activo_pr] [bit] NULL,
+	[precio] [decimal](18, 2) NULL,
+ CONSTRAINT [PK_tb_productos] PRIMARY KEY CLUSTERED 
+(
+	[id_producto] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[tb_productos]  WITH CHECK ADD  CONSTRAINT [FK_tb_productos_tb_categorias] FOREIGN KEY([id_categoria])
+REFERENCES [dbo].[tb_categorias] ([id_categoria])
+GO
+
+ALTER TABLE [dbo].[tb_productos] CHECK CONSTRAINT [FK_tb_productos_tb_categorias]
+GO
+
+ALTER TABLE [dbo].[tb_productos]  WITH CHECK ADD  CONSTRAINT [FK_tb_productos_tb_medidas] FOREIGN KEY([id_medida])
+REFERENCES [dbo].[tb_medidas] ([id_medida])
+GO
+
+ALTER TABLE [dbo].[tb_productos] CHECK CONSTRAINT [FK_tb_productos_tb_medidas]
+GO
+
+
