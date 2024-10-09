@@ -1,0 +1,64 @@
+ejercicio power automate, leer un excel y copiar la tabla en otro archivo excel
+
+(trigger)
+Desencadenar un flujo manualmente
+
+(acciones)
+(1) excel
+Enumerar las filas de una tabla
+Ubicación: OneDrive for Business
+biblioteca de documentos: Documentos
+archivo: /pruebas_josmar/Reporte 5_10_2024 17_14_49.xlsx (este es mi archivo de excel que iba a copiar)
+tabla: Table1
+
+(2) operación de datos
+Análisis del archivo JSON
+content: body/value -> respuesta output de acción anterior (1)
+schema: 
+{
+    "": ""
+}   -> pide un ejemplo del json, yo le puse de uno en blanco
+
+(3) operación de datos
+Crear tabla HTML
+from: body -> el body del archivo json (2)
+
+(4) variables
+var tabla sin body
+name: variable tabla sin cuerpo
+tipo: string
+value: split(body('Crear_tabla_HTML'),'</tr>')[0]
+
+(5) variables
+array de columnas
+name: array columnas
+type: array
+value: skip(split(replace(variables('variable tabla sin cuerpo'),'</th>',''),'<th>'),3)
+
+(6) variables
+columnas string
+name: columnas string
+type: string
+value: replace(replace(replace(string(variables('array columnas')),'[',''),']',''),'"','') -> aqui estan las columnas
+
+(7) excel
+crear tabla
+Ubicación: OneDrive for Business
+biblioteca de documentos: Documentos
+archivo: /pruebas_josmar/libroBlanco.xlsx -> tuve que crear un libro en blanco y guardar en one drive
+rango de tabla: A1
+parametros avanzados:
+nombre de tabla: tabla1
+nombre de columnas (separadas por coma o punto y coma): columnas string -> le puse la variable (6)
+
+(11) condition
+aplicar a cada uno
+seleccionar salida de paso previo: cuerpo -> que es variable de salida de (2) Análisis del archivo JSON
+
+(11)(1) -> dentro del aplicar a cada uno
+Agregar una fila a una tabla 1
+Ubicación: OneDrive for Business
+biblioteca de documentos: Documentos
+archivo: /pruebas_josmar/LibroenBlanco.xlsx
+tabla: outputs('Crear tabla')?['body/name'] -> obtiene el nombre de la salida de crear tabla campo name
+fila: items('aplicar a cada uno') -> es el item de la condición aplicar a cada uno
